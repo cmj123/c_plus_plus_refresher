@@ -58,6 +58,7 @@ int main(){
  **/
 
 // cpp 06 - operations 
+/**
 #include <iostream>
 
 using namespace std;
@@ -80,3 +81,56 @@ int main(){
     cout << fullname << endl;
     return 0;
 }
+**/
+
+// cpp 07 - statements 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    int num1; 
+    cout << "Enter a number: ";
+    cin >> num1;
+    
+    // IF statement 
+    if(num1 < 3){
+        cout << "Num1 is less than 3." << endl; 
+    }
+    else if(num1 > 3){
+        cout << "Num1 is greater than 3." << endl;
+    }
+    else {
+        cout << "Num1 is equal 3" << endl;
+    }
+    
+    // Switch case 
+    char grade;
+    cout << "Enter a grade" << endl;
+    cin >> grade;
+    
+    // char grade = 'B';
+    switch(grade){
+        case 'A':{
+            cout << "You made a 90 or above." << endl;
+            break;
+        }
+        case 'B':{
+            cout << "You made a 80 or above." << endl;
+            break;
+        }
+        case 'C':{
+            cout << "You made a 70 or above." << endl;
+            break;
+        }
+        case 'F':{
+            cout << "You failed." << endl;
+            break;
+        }
+        default:
+            cout << "You dont have a grad" << endl;
+    }
+    return 0;
+}
+
