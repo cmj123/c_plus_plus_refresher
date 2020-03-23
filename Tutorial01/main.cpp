@@ -29,7 +29,7 @@ int main(){
 **/
 
 // CPP 05 - Compiler Input
-
+/**
 #include <iostream>
 
 using namespace std;
@@ -55,6 +55,28 @@ int main(){
     
     return 0;
 }
+ **/
 
+// cpp 06 - operations 
+#include <iostream>
 
- 
+using namespace std;
+
+int main(){
+    
+    int num1 = 60;
+    int num2 = 6;
+    
+    cout << "Sum - " << (num1 + num2) << endl;
+    cout << "Subract - " << (num1 - num2) << endl;
+    cout << "Multiply - " << (num1 * num2) << endl;
+    cout << "Division - " << (num1 / num2) << endl;
+    cout << endl;
+    
+    // String concantenation
+    string first_name = "Tom";
+    string last_name = "Jones";
+    string  fullname = first_name + " " + last_name;
+    cout << fullname << endl;
+    return 0;
+}
