@@ -219,7 +219,7 @@ int main(){
  **/
  
 // CPP 10 - Arrays
-
+/**
 #include <iostream>
 #include <fstream>
  
@@ -245,4 +245,50 @@ int main()
      return 0;
 
 }
+**/
 
+// CPP 11 - Inputs
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+
+using namespace std;
+
+int main()
+{
+    const int SIZE = 12;
+    string names_list[SIZE] = {""};
+    string temp_name; 
+    
+    ifstream input_file("names.txt");
+    if(!input_file){
+        cout << "File not found." << endl;
+        return -6;
+    }
+    
+    // Pre-Read 
+    input_file.ignore(255, '\n');
+//    input_file >> temp_name;
+    getline(input_file, temp_name);
+    int index = 0;
+    while(!input_file.eof()){
+        
+        names_list[index] = temp_name;
+        index++;
+        // Post-Read
+//        input_file >> temp_name;
+        getline(input_file, temp_name);
+    }
+    
+    for(int i = 0; i < SIZE; i++){
+        cout << i << "  " << names_list[i] << endl; 
+    }
+    
+    cout << left << setprecision(2) << fixed;
+    double double_value = 201.792;
+    int integer_value = 227;
+    cout << endl << endl << endl;
+    cout << setw(25) << double_value << setw(25) << integer_value << endl;
+    return 0;
+}
