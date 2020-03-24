@@ -296,6 +296,7 @@ int main()
 **/
 
 // CPP 12 - Creating an Application in C++
+/**
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -330,5 +331,37 @@ int main(){
     }
     
     
+    return 0;
+}
+**/
+
+// CPP 13 - Functions in C++
+#include <iostream>
+
+using namespace std;
+
+void print_hello(){
+    cout << "HELLO!" << endl;
+}
+
+double get_age(){
+    double age = 23.0;
+    return age;
+}
+
+string get_name(string name){
+    return name;
+}
+
+using namespace std;
+
+int main()
+{
+    
+    print_hello();
+    cout << get_age(); 
+    cout << endl;
+    cout << get_name("Lotty");
+    cout << endl;
     return 0;
 }
