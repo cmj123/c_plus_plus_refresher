@@ -248,6 +248,7 @@ int main()
 **/
 
 // CPP 11 - Inputs
+/**
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -290,5 +291,44 @@ int main()
     int integer_value = 227;
     cout << endl << endl << endl;
     cout << setw(25) << double_value << setw(25) << integer_value << endl;
+    return 0;
+}
+**/
+
+// CPP 12 - Creating an Application in C++
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+    
+    cout << left;
+    string employee_name;
+    int employee_salary;
+    ifstream employee_file("employees.txt");
+    if (!employee_file){
+        cout << "Employee text file not found.\n\n";
+        return -9;
+    }
+    employee_file.ignore(255, '\n');
+    employee_file.ignore(255, '\n');
+    
+    // Pre-Read 
+    cout << "\tHUMAN RESOURCES PAYROLL LIST\n\n";
+    cout << setw(23) << "FULL NAME" << "SALARY" << endl << endl;
+    getline(employee_file, employee_name, ',');
+    employee_file >> employee_salary;
+    while(!employee_file.eof()){
+        
+        
+        cout << setw(25) << employee_name <<employee_salary << endl;
+        //Post-Read 
+        getline(employee_file, employee_name, ',');
+        employee_file >> employee_salary;
+    }
+    
+    
     return 0;
 }
