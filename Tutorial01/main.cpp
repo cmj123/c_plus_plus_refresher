@@ -185,6 +185,7 @@ int main(){
 **/
 
 // CPP09 - Loops 
+/**
 #include <iostream>
 
 using namespace std;
@@ -214,5 +215,34 @@ int main(){
     
     return 0;
     
+}
+ **/
+ 
+// CPP 10 - Arrays
+
+#include <iostream>
+#include <fstream>
+ 
+using namespace std; 
+ 
+int main()
+{
+//     const int SIZE = 3;
+//     string grocery_list[SIZE] = {"eggs", "milk", "bread"};
+//     for(int index = 0; index < SIZE, index++){
+//         cout << grocery_list[index] << endl;
+//     }
+     
+     ofstream output_file("names.txt");
+     if(!output_file){
+         cout << "The file could not be found." << endl;
+         return -5;
+     }
+     
+     string name = "Zach";
+     output_file << name << endl; 
+     
+     return 0;
+
 }
 
