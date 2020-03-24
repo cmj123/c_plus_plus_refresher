@@ -136,7 +136,7 @@ int main(){
 }
 
 **/
-
+/**
 // CPP 08 - Practical Application
 #include <iostream>
 
@@ -182,3 +182,37 @@ int main(){
     
     return 0;
 }
+**/
+
+// CPP09 - Loops 
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    int run = 10;
+    
+    // while loop 
+    while (run >= 0){
+        cout << run << endl;
+        run +=1;
+    }
+    
+    // Do while loop
+    do{
+        cout << run << endl;
+        run -=2;
+    } while (run >= 0);
+    
+    // For loop
+    int value = 0;
+    for(int index = 0; index < 10; index++){
+        cout << value << endl;
+        value+=5;
+    }
+    
+    return 0;
+    
+}
+
