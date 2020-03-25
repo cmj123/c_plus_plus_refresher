@@ -336,6 +336,7 @@ int main(){
 **/
 
 // CPP 13 - Functions in C++
+/**
 #include <iostream>
 
 using namespace std;
@@ -364,4 +365,33 @@ int main()
     cout << get_name("Lotty");
     cout << endl;
     return 0;
+}
+**/
+
+// CPP 14 - Reference 
+#include <iostream> 
+
+using namespace std;
+
+void print_age(int &);
+void change_address(string &);
+
+int main(){
+//    int age = 7;
+//    print_age(age);
+//    cout << endl << age << endl;
+    string my_address = "2418 Willow Rd.";
+    cout << "Address before function call: " << my_address << endl;
+    change_address(my_address);
+    cout << "Address before function call" << my_address << endl; 
+    return 0;
+}
+
+void print_age(int &x){
+    x = 5;
+    cout << x;
+}
+
+void change_address(string &address){
+    address = "1400 College Dr.";
 }
