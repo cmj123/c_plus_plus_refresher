@@ -399,6 +399,7 @@ void change_address(string &address){
 **/ 
 
 // CPP 15 - Overloading Functions 
+/**
 #include <iostream>
 #include <iomanip>
 
@@ -428,4 +429,34 @@ void print_salary(float x){
 
 void print_salary(string x){
     cout << endl << x << endl;
+}
+**/
+
+// CPP 16 - String Functions 
+#include <iostream>
+
+using namespace std; 
+int generate_random_number();
+
+int main(){
+    
+//    string name = "Zach";
+//    cout << name.size() << endl;
+//    cout << name.find('u') << endl;
+    char end_program = 'a';
+    
+    while(end_program != 'q'){
+        cout << generate_random_number();
+        cout << endl;
+        cin >> end_program;
+    }
+    
+    
+    return 0;
+}
+
+int generate_random_number(){
+    srand(time(NULL));
+    int number = rand()%10 + 1;
+    return number;
 }
