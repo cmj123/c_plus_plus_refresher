@@ -369,6 +369,7 @@ int main()
 **/
 
 // CPP 14 - Reference 
+/**
 #include <iostream> 
 
 using namespace std;
@@ -394,4 +395,37 @@ void print_age(int &x){
 
 void change_address(string &address){
     address = "1400 College Dr.";
+}
+**/ 
+
+// CPP 15 - Overloading Functions 
+#include <iostream>
+#include <iomanip>
+
+using namespace std; 
+
+void print_salary(int);
+void print_salary(float);
+void print_salary(string);
+
+int main(){
+    
+    cout << setprecision(4) << fixed;
+    float salary;
+    cout << "Enter your salary: ";
+    cin >> salary;
+    print_salary(salary);
+    return 0;
+}
+
+void print_salary(int x){
+    cout << endl << x << endl;
+}
+
+void print_salary(float x){
+    cout << endl << x << endl;
+}
+
+void print_salary(string x){
+    cout << endl << x << endl;
 }
